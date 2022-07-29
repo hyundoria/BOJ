@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args)  {
+        Scanner sc = new Scanner(System.in);
+
+
+        String str = sc.next();
+        String stt = sc.next();
+        StringBuilder st1 = new StringBuilder();
+        StringBuilder st2 = new StringBuilder();
+
+        for (int i=str.length(); i>0; i--) {
+            st1.append(str.charAt(i - 1));
+        }
+
+        for (int i=stt.length(); i>0; i--) {
+            st2.append(stt.charAt(i - 1));
+        }
+
+
+        int result = Integer.parseInt(String.valueOf(st1)) + Integer.parseInt(String.valueOf(st2));
+
+        String sre = String.valueOf(result);
+        StringBuilder srr = new StringBuilder();
+
+
+        for (int i=sre.length(); i>0; i--) {
+            srr.append(sre.charAt(i - 1));
+        }
+
+        System.out.println(Integer.parseInt(String.valueOf(srr)));
+
+
+    }
+
+}
