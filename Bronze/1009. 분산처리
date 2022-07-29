@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			int n = sc.nextInt();
+			
+			for (int i=0; i<n; i++) {
+				
+        int a = sc.nextInt();
+				int b = sc.nextInt();
+				int t = a;	
+				int count = 0;
+				
+				
+				 while (true)	{										
+					 if (count == b-1) {
+							break;
+						}	
+					 
+					 int c = (t % 10);
+					 int d = c * a;
+					 					 
+					 t = d % 10;
+					 
+						count++;							 					
+				 }
+				if ((t%10) == 0) {
+					System.out.println("10");
+				}
+				else {
+					System.out.println(t%10);
+				}
+				
+			}			
+						
+									
+			}
+		}
+	}
