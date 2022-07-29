@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			
+			for(int i=0; i<3; i++) {
+				int count = 0;
+				int arr[] = new int[4];
+				for(int j=0; j<4; j++) {
+					arr[j] = sc.nextInt();
+					if(arr[j]==0) {
+						count++;
+					}
+				}
+				if(count == 1) {
+					System.out.println("A");
+				}
+				if(count == 2) {
+					System.out.println("B");
+				}
+				if(count == 3) {
+					System.out.println("C");
+				}
+				if(count == 4) {
+					System.out.println("D");
+				}
+				if(count == 0) {
+					System.out.println("E");
+				}
+			}
+
+			
+			
+			}
+		}
+	}
