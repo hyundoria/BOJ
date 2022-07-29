@@ -1,0 +1,44 @@
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args)  {
+        try (Scanner sc = new Scanner(System.in)) {
+
+
+            HashMap<String, String> re = new HashMap<String, String>();
+            re.put("black","0");
+            re.put("brown","1");
+            re.put("red","2");
+            re.put("orange","3");
+            re.put("yellow","4");
+            re.put("green","5");
+            re.put("blue","6");
+            re.put("violet","7");
+            re.put("grey","8");
+            re.put("white","9");
+
+            String str = re.get(sc.next());
+            String stt = re.get(sc.next());
+            String stq = re.get(sc.next());
+
+            String result = "";
+            String zero = "1";
+            int n = Integer.parseInt(stq);
+
+            result += str;
+            result += stt;
+
+
+            for (int i=0; i<n; i++) {
+                zero += "0";
+            }
+
+            System.out.println(Integer.parseInt(result) * Long.parseLong(zero));
+
+
+
+        }
+    }
+}
