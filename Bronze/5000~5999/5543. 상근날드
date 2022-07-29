@@ -1,0 +1,46 @@
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int sum = 0;
+		
+		int buger[] = new int[3];
+		int drink[] = new int[2];
+		
+		for(int i=0; i<3; i++) {
+			buger[i] = sc.nextInt();
+		}
+		
+		for(int i=0; i<2; i++) {
+			drink[i] = sc.nextInt();
+		}
+
+		for(int i=0; i<3; i++) {
+			for(int j=i; i<3; i++) {
+				if(buger[i] < buger[j]) {
+					int tmp = buger[i];
+					buger[i] = buger[j];
+					buger[j] = tmp;
+				}
+			}
+		}
+		
+		for(int i=0; i<2; i++) {
+			for(int j=i; i<2; i++) {
+				if(drink[i] < drink[j]) {
+					int tmp = drink[i];
+					drink[i] = drink[j];
+					drink[j] = tmp;
+				}
+			}
+		}
+		
+		
+		System.out.println(buger[0] + drink[0] - 50);
+		
+	}
+
+}
