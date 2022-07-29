@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			
+			int n = sc.nextInt();
+			
+			
+			for (int i=0; i<n; i++) {				
+				int m = sc.nextInt();
+				String bi = Integer.toBinaryString(m);
+				String reverse = "";
+				for (int k = bi.length() - 1; k >= 0; k-- ) {
+					reverse = reverse + bi.charAt(k);
+				}				
+				
+				String[] arr = new String[bi.length()];
+				int arr1[] = new int[arr.length];
+					
+					for (int j=0; j<arr.length; j++) {
+						arr[j] = reverse.substring(j,j+1);
+						arr1[j] = Integer.parseInt(arr[j]);
+					}					
+					
+					
+					for (int r=0; r<arr1.length; r++) {
+						if(arr1[r] == 1) {
+							System.out.print(r + " ");
+						}
+					}
+						
+								
+			}
+			
+			
+			
+						
+			}
+		}
+	}
