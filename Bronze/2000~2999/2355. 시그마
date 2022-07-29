@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        long a = sc.nextInt();
+        long b = sc.nextInt();
+
+        long c = Math.abs(b-a) + 1;
+
+        if (c % 2 == 0) {
+           System.out.println((a+b) * (c/2));
+        }
+        else {
+            System.out.println((a+b) * (c/2) + ((a+b)/2));
+        }
+
+
+
+
+    }
+}
