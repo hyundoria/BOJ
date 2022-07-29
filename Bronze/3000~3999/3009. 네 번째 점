@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			
+			
+			
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			int c = sc.nextInt();
+			int d = sc.nextInt();
+			int e = sc.nextInt();
+			int f = sc.nextInt();
+			
+			if(a==c) {
+				System.out.printf("%d ", e);
+			}
+			else if(a==e) {
+				System.out.printf("%d ", c);
+			}
+			else if(c==e) {
+				System.out.printf("%d ", a);
+			}
+			
+			if(b==d) {
+				System.out.printf("%d", f);
+			}
+			else if(b==f) {
+				System.out.printf("%d", d);
+			}
+			else if(d==f) {
+				System.out.printf("%d", b);
+			}
+			
+			}
+		}
+	}
+
+
+
