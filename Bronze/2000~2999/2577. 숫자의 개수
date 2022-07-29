@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+		
+						
+						
+			int A = sc.nextInt();
+			int B = sc.nextInt();
+			int C = sc.nextInt();
+			int D = A*B*C;
+								
+			int[]  arr = new int[10];
+			
+			while(D > 0) {				
+				arr[D%10]++;
+				D /= 10;	
+			}	
+		
+			for(int r = 0; r < arr.length; r++) {
+				System.out.println(arr[r]);
+			}
+			
+			
+			
+			
+		}		 
+	}
+}
