@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+    public static <boole0an> void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+
+        int indexn = 0;
+        int indexk = 0;
+
+        int sum = 0;
+
+        for (int i=1; i<=n; i++){
+            n -= i;
+            indexn = i;
+        }
+
+        if (n != 0) {
+            indexn += 1;
+        }
+        else {
+            n+=indexn;
+        }
+
+
+        for (int i=1; i<=k; i++){
+            k -= i;
+            indexk = i;
+        }
+
+        if (k != 0) {
+            indexk += 1;
+        }
+        else {
+            k = indexk;
+        }
+
+        for (int i=indexn+1; i<indexk; i++) {
+            sum += i*i;
+        }
+
+
+        if (indexk == indexn) {
+            System.out.println(indexn*(k-n+1));
+        }
+        else {
+            n = indexn-n+1;
+            System.out.println(sum + (indexk*k) + (indexn*n));
+        }
+        
+    }
+}
