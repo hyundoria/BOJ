@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main {	
+	public static void main(String[] args) {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+	loop :	while (true) {
+			int count = 0;
+			String str = sc.nextLine();			
+			str = str.replaceAll(" ","");	
+			str = str.toLowerCase();		
+			
+			for (int i=0; i<str.length(); i++) {
+				char c  = str.charAt(i);
+				if (c == 35) {
+					break loop;
+				}
+				else if (c == 97 || c == 101  || c == 105 || c == 111 || c == 117) {
+					count ++;
+				}
+				
+			}	
+			System.out.println(count);			
+		}
+		
+		
+		
+		
+		}										
+	}
+}
