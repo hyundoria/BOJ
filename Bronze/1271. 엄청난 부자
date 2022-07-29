@@ -1,0 +1,16 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+class Main {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        BigInteger bi = new BigInteger(sc.next());
+        BigInteger big = new BigInteger(sc.next());
+
+        System.out.println(bi.divide(big));
+        System.out.println(bi.remainder(big));
+
+    }
+}
+
