@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {	
+	public static void main(String[] args) {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+		int n = sc.nextInt();
+		
+		int vy=0;
+		int vm=0;
+		
+		for (int i=0; i<n; i++) {
+			int k = sc.nextInt();
+		
+			vy += ((k / 30)+1) * 10; 
+			
+			
+			vm += ((k / 60)+1) * 15; 
+		}
+		
+		if (vy < vm) {
+			System.out.println("Y " + vy);
+		}
+		else if (vy == vm) {
+			System.out.println("Y M " + vm);
+		}
+		else if (vy > vm) {
+			System.out.println("M " + vm);
+		}
+		
+		
+		
+		
+		}										
+	}
+}
