@@ -1,0 +1,29 @@
+import java.util.Scanner;
+	
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			String a = sc.next();
+			String b = sc.next();
+			
+			long sum = 0;
+			
+			for(int i=0; i<a.length(); i++) {
+				for(int j=0; j<b.length(); j++) {
+					String aa = a.substring(i, i+1);
+					String bb = b.substring(j, j+1);
+					long aaa = Long.parseLong(aa); 
+					long bbb = Long.parseLong(bb);
+					sum += aaa*bbb;
+				}
+			
+			}
+			
+			System.out.println(sum);
+			
+			
+			}
+		}
+	}
+
