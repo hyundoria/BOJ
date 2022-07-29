@@ -1,0 +1,57 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+class comb {
+
+    public static int combi(int a, int b) {
+        if (a==b || b==0) {
+            return 1;
+        }
+        else {
+            return combi(a-1,b-1) + combi(a-1,b);
+        }
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        comb com = new comb();
+
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int count = 0;
+
+        int co = comb.combi(n,3);
+
+        int[] coarr = new int[co];
+
+        int[] arr = new int[n];
+
+        for (int i=0; i<arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        for (int i=0; i<arr.length; i++) {
+            for (int j=i+1; j<arr.length; j++) {
+                for (int r=j+1; r<arr.length; r++) {
+                    if (arr[i] + arr[j] + arr[r] <= m) {
+                        coarr[count++] = arr[i] + arr[j] + arr[r];
+                        }
+                    else {
+                        coarr[count++] = 0;
+                    }
+                }
+            }
+        }
+
+        Arrays.sort(coarr);
+
+        System.out.println(coarr[coarr.length-1]);
+
+
+
+    }
+}
