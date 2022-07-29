@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        int gcd = 0;
+        int lcm = 0;
+
+        if ((a % b)  == 0) {
+            gcd = b;
+        }
+        else {
+
+            int c = a;
+            int d = b;
+
+            while (d != 0) {
+                 int r = c%d;
+                 c = d;
+                 d = r;
+            }
+
+            gcd = c;
+
+
+        }
+
+
+
+
+        System.out.println(gcd);
+        System.out.println((a*b) / gcd);
+
+
+
+    }
+}
