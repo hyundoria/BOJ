@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try (Scanner sc = new Scanner(System.in)) {
+	
+		int a = sc.nextInt();				
+		int b = sc.nextInt();
+		
+		int q = b/100;
+		int w = (b%100) / 10;
+		int r = (b%100) % 10;
+		
+		System.out.println(a*r);
+		System.out.println(a*w);
+		System.out.println(a*q);
+		System.out.println(a*b);
+		
+		}
+	}
+}
