@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+					
+		
+			int a = 0;
+			
+			int arr[] = new int[10];
+			
+			for (int i = 0; i < 10; i++) {
+				 a -= sc.nextInt();		
+				 a += sc.nextInt();
+				 arr[i] = a;
+			}
+			
+			for(int i=0; i < arr.length-1; i++) {											
+				for(int j=i+1; j < arr.length; j++) {
+					if(arr[i] > arr[j]) {
+						arr[i] = (arr[i] + arr[j]) - (arr[j] = arr[i]);	
+					}
+				}
+			}
+				
+			System.out.println(arr[9]);
+			
+		
+			
+		}		
+	}
+}
+
