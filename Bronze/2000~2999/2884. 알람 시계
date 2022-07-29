@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try (Scanner sc = new Scanner(System.in)) {
+	
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		 
+		
+		if (a > 0 && b < 45) {
+			System.out.println(a-1);
+			System.out.println(60 - Math.abs(b-45));
+		}
+		
+		else if (a > 0 && b > 45){
+			System.out.println(a);
+			System.out.println(b-45);
+		}
+		
+		else if (a > 0 && b == 45){
+			System.out.println(a);
+			System.out.println("0");
+		}
+		
+		else if (a == 0 && b < 45){
+			System.out.println("23");
+			System.out.println(60 - Math.abs(b-45));
+		}
+		
+		else if (a == 0 && b > 45){
+			System.out.println(a);
+			System.out.println(b-45);
+		}
+		
+		else if (a == 0 && b == 45){
+			System.out.println(a);
+			System.out.println("0");
+		}
+		
+		}
+	}
+}
