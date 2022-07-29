@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			
+		
+			long a = sc.nextLong();
+			long b = sc.nextLong();
+			
+			if (a>b) {
+				System.out.println(-b+a);
+			}
+			else if (a<b) {
+				System.out.println(-a+b);
+			}
+			
+			
+			}
+		}
+	}
