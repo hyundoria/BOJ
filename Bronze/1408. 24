@@ -1,0 +1,116 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.next(); 
+        String stt = sc.next(); 
+
+        int h1 = Integer.parseInt(str.substring(0,2));
+        int h2 = Integer.parseInt(stt.substring(0,2));
+
+        int m1 = Integer.parseInt(str.substring(3,5));
+        int m2 = Integer.parseInt(stt.substring(3,5));
+
+        int s1 = Integer.parseInt(str.substring(6,8));
+        int s2 = Integer.parseInt(stt.substring(6,8));
+
+        int h, m, s = 0;
+
+        if (h1 <= h2) {  //h2 - h1
+
+            int c = h2 - h1;
+            int mm = m2 + c * 60;
+
+
+            m = mm - m1;
+            s = s2 - s1;
+
+            if (s < 0) {
+                s += 60;
+                m -= 1;
+            }
+
+            int hh = 0;
+
+            if (m > 60) {
+                hh = m / 60;
+                m = m % 60;
+            }
+
+            if (m < 0) {
+                hh += 23;
+                m += 60;
+            }
+
+            String hhh = String.valueOf(hh);
+            String mmm = String.valueOf(m);
+            String sss = String.valueOf(s);
+
+            if (hh < 10) {
+                 hhh = "0" + hh;
+            }
+            if (m < 10) {
+                 mmm = "0" + m;
+            }
+            if (s < 10) {
+                sss = "0" + s;
+            }
+
+
+            System.out.println(hhh+":" + mmm + ":" + sss);
+        }
+
+        else {
+
+            int c = h1 - h2;
+            int mm = m1 + c * 60;
+
+
+            m = mm - m2;
+            s = s1 - s2;
+
+            if (s < 0) {
+                s += 60;
+                m -= 1;
+            }
+
+            int hh = 0;
+
+            if (m > 60) {
+                hh = m / 60;
+                m = m % 60;
+            }
+
+            int hhhh = 23;
+            int mmmm = 59;
+            int ssss = 60;
+
+            hhhh -= hh;
+            mmmm -= m;
+            ssss -= s;
+
+            String hhh = String.valueOf(hhhh);
+            String mmm = String.valueOf(mmmm);
+            String sss = String.valueOf(ssss);
+
+            if (hhhh < 10) {
+                hhh = "0" + hhhh;
+            }
+            if (mmmm < 10) {
+                mmm = "0" + mmmm;
+            }
+            if (ssss < 10) {
+                sss = "0" + ssss;
+            }
+
+
+            System.out.println(hhh+":" + mmm + ":" + sss);
+
+        }
+
+
+    }
+}
