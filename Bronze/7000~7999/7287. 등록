@@ -5,8 +5,8 @@ public class Main {
 		try (Scanner sc = new Scanner(System.in)) {
 			
 				
-			System.out.println("83");
-			System.out.println("hyundoria");
+			System.out.println("your_correct_answer_question");
+			System.out.println("your_name");
 			
 			}
 		}
