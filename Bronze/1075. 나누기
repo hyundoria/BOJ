@@ -1,0 +1,45 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        String str = String.valueOf(n);
+        str = str.substring(0,str.length()-2);
+        str += "00";
+
+        n = Integer.parseInt(str);
+
+        int f = sc.nextInt();
+
+        int k = 0;
+
+        for (int i = n; i<n+100; i++) {
+
+            if (i % f == 0) {
+                k = i;
+                break;
+            }
+
+        }
+
+        str = String.valueOf(k);
+
+        str = str.substring(str.length()-2);
+
+        if (str.length() == 1) {
+            System.out.println("0" + str);
+        }
+        else {
+            System.out.println(str);
+        }
+
+
+
+
+
+    }
+}
