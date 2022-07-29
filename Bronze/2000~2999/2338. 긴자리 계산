@@ -1,0 +1,18 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        BigInteger big = new BigInteger(sc.next());
+        BigInteger bii = new BigInteger(sc.next());
+
+        System.out.println(big.add(bii));
+        System.out.println(big.subtract(bii));
+        System.out.println(big.multiply(bii));
+
+
+
+    }
+}
