@@ -3,24 +3,20 @@ import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10**6)
 
-def dfs(v):
+def dfs(node):
 
-    global cnt
+    global result
 
-    visited[v] = True
-    next = arr[v]
+    visited[node] = True
+    next = arr[node]
+    path.append(node)
 
     if visited[next]:
-        if not finished[next]:
-            temp = next
-            cnt += 1
-            while temp != v:
-                cnt += 1
-                temp = arr[temp]
+        if next in path:
+            result += path[path.index(next):]
+            return
     else:
         dfs(next)
-    
-    finished[v] = True
 
 t = int(input())
 
@@ -28,22 +24,19 @@ for _ in range(t):
 
     n = int(input())
 
-    arr = [0] + list(map(int, input().split()))
+    arr = list(map(int, input().split()))
+    arr.insert(0,0)
 
     visited = [False] * (n+1)
-
-    finished = [False] * (n+1)
-
-    cnt = 0
+    result = []
 
     for i in range(1,n+1):
 
+        path = []
+        
         if not visited[i]:
             dfs(i)
 
 
-    print(n - cnt)
-            
-
-
+    print(n-len(result))
         
