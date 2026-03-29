@@ -1,0 +1,41 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+
+            int[] arr = new int[30];
+            int[] init = new int[30];
+
+            for (int i=0; i<28; i++) {
+                arr[i] = sc.nextInt();
+            }
+
+            arr[29] = 0;
+            arr[28] = 0;
+
+            Arrays.sort(arr);
+
+            for (int i=0; i<30; i++) {
+               init[i] = i+1;
+            }
+
+          loop : for (int i=2; i<30; i++) {
+                for (int j=0; j<30; j++) {
+                    if (arr[i] == init[j]) {
+                        init[j] = 0;
+                        continue loop;
+                    }
+                }
+            }
+
+            Arrays.sort(init);
+
+            System.out.println(init[28]);
+            System.out.println(init[29]);
+
+
+        }
+    }
+}
