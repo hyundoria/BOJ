@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+				
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			
+			if (a > 2 && b < 5) {
+				System.out.println("TroyMartian");
+			}
+			if (a < 7 && b > 1) {
+				System.out.println("VladSaturnian");
+			}
+			if (a <= 2 && b <= 3) {
+				System.out.println("GraemeMercurian");
+			}
+		
+
+			
+			
+			}
+		}
+	}
+
+
