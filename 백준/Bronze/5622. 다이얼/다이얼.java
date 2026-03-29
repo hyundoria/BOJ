@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			int sum = 0;
+			
+			
+			String str = sc.next();
+			
+			for(int i=0; i<str.length(); i++) {
+				char ch = str.charAt(i);								
+					if(ch == 65 || ch == 66 || ch == 67) {
+					sum += 3;
+					}
+					else if(ch == 68 || ch == 69 || ch == 70) {
+					sum += 4;
+					}
+					else if(ch == 71 || ch == 72 || ch == 73) {
+					sum += 5;
+					}
+					else if(ch == 74 || ch == 75 || ch == 76) {
+					sum += 6;
+					}
+					else if(ch == 77 || ch == 78 || ch == 79) {
+					sum += 7;
+					}
+					else if(ch == 80 || ch == 81 || ch == 82 || ch == 83) {
+					sum += 8;
+					}
+					else if(ch == 84 || ch == 85 || ch == 86) {
+					sum += 9;
+					}
+					else if(ch == 87 || ch == 88 || ch == 89 || ch == 90) {
+					sum += 10;
+				}
+				
+			}
+			
+			System.out.println(sum);
+			
+	
+						
+			}
+		}
+	}
+
