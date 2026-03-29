@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+								
+			
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			
+			String c = Integer.toString(a);
+			String d = Integer.toString(b);
+			
+			String reverse = "";
+			String revers = "";
+			
+			for (int i = c.length() - 1; i >= 0; i-- ) {
+				reverse = reverse + c.charAt(i);
+			}
+			
+			for (int i = d.length() - 1; i >= 0; i-- ) {
+				revers = revers + d.charAt(i);
+			}
+			
+			int bb = Integer.parseInt(revers);
+			int aa = Integer.parseInt(reverse);
+			
+			if (aa > bb) {
+				System.out.println(aa);
+			}
+			else {
+				System.out.println((bb));
+			}
+			
+		
+			}
+		}
+	}
+
