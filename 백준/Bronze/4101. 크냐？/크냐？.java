@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+		
+						
+						
+			
+			
+			while (true) {
+				int a = sc.nextInt();
+				int b = sc.nextInt();
+				if (a > b) {
+					 System.out.println("Yes");
+				}
+				else if (a + b == 0) {
+					break;
+				}
+				else if (a <= b) {
+					System.out.println("No");
+				}
+						
+					 
+					 
+				 								 					  			
+			}
+			
+			
+			
+			
+		}		 
+	}
+}
