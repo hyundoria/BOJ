@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+				
+			String[][] arr = {
+								{"SHIP NAME      ","CLASS          ","DEPLOYMENT IN SERVICE"},
+								{"N2 Bomber      ","Heavy Fighter  ","Limited    21        "},
+								{"J-Type 327     ","Light Combat   ","Unlimited  1         "},
+								{"NX Cruiser     ","Medium Fighter ","Limited    18        "},
+								{"N1 Starfighter ","Medium Fighter ","Unlimited  25        "},
+								{"Royal Cruiser  ","Light Combat   ","Limited    4         "}
+			
+			
+			};
+			
+			for (int i = 0; i < arr.length; i++) {
+				String[] inArr = arr[i];
+				for (int j = 0; j < inArr.length; j++) {
+				System.out.print(inArr[j]);
+				}
+				System.out.println();
+				}
+			
+			
+			
+			}
+		}
+	}
+
+
