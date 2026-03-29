@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+				
+			String hex = sc.nextLine();
+		
+			int dec = Integer.parseInt(hex,16);
+			
+			System.out.println(dec);
+			
+			
+			}
+		}
+	}
+
+
