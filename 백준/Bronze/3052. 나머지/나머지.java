@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+								
+			
+int arr[] = new int[10];
+			
+			
+			for (int i=0; i < arr.length; i++) {
+				arr[i] = sc.nextInt();
+			}
+			
+			for (int i=0; i < arr.length; i++) {
+				arr[i] = arr[i] % 42;
+			}
+			
+			
+			for(int i=1; i < arr.length; i++){
+	            for(int j=i ; j >= 1; j--){
+	                
+	                if(arr[j] < arr[j-1]){  //한 칸씩 왼쪽으로 이동
+	                    int tmp = arr[j];
+	                    arr[j] = arr[j-1];
+	                    arr[j-1] = tmp;
+	                }else break;  //자기보다 작은 데이터를 만나면 그 위치에서 멈춤
+	                
+	            }
+	        }
+			
+			
+			
+			int count = 1;
+			
+			for (int i = 0; i < arr.length-1; i++) {
+				if (arr[i] != arr[i+1]) {
+					count++;
+				}
+			}
+			
+			System.out.println(count);
+	
+		
+			}
+		}
+	}
