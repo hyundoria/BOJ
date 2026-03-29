@@ -1,0 +1,43 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] arr = new int[9];
+
+        for (int i=0; i<arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int sum = 0;
+        int iv = 0;
+        int jv = 0;
+
+        for (int i=0; i<arr.length; i++) {
+            sum += arr[i];
+        }
+
+        for (int i=0; i<arr.length; i++) {
+            for (int j=1; j<arr.length; j++) {
+                if (sum - arr[i] - arr[j] == 100) {
+                  iv = i;
+                  jv = j;
+                }
+            }
+        }
+
+        arr[iv] = 0;
+        arr[jv] = 0;
+
+        Arrays.sort(arr);
+
+        for (int i=2; i<arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+
+
+
+    }
+}
