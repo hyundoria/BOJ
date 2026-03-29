@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args)  {
+        try (Scanner sc = new Scanner(System.in)) {
+
+
+            while (true) {
+
+                int n = sc.nextInt();
+
+                if (n == 0) {
+                    System.exit(0);
+                }
+
+                String str = Integer.toString(n);
+                String stt = "";
+
+                for (int i=str.length()-1; i>=0; i--) {
+
+                    stt += str.charAt(i);
+
+                }
+
+                int k = Integer.parseInt(stt);
+
+                if (n == k) {
+                    System.out.println("yes");
+                }
+                else {
+                    System.out.println("no");
+                }
+
+
+
+            }
+
+        }
+    }
+}
