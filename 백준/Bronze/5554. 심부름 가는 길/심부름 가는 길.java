@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			int c = sc.nextInt();
+			int d = sc.nextInt();
+			
+			int sum = a+b+c+d;
+			int x =0;
+			
+			
+			while (sum >= 60) {
+				sum -= 60;
+				x++;						
+			}
+			
+			System.out.println(x);
+			System.out.println(sum);
+			
+	
+						
+			}
+		}
+	}
