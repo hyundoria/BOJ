@@ -1,0 +1,27 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.next();
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i=0; i<str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch < 97){
+                result.append(String.valueOf(ch).toLowerCase());
+            }
+            else {
+                result.append(String.valueOf(ch).toUpperCase());
+            }
+        }
+
+
+        System.out.println(result);
+
+
+    }
+}
