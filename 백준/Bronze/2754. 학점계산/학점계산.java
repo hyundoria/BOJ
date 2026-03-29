@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.next();
+
+        if (str.charAt(0) == 'F') {
+            System.out.println("0.0");
+            System.exit(0);
+        }
+
+        switch (str.charAt(1)) {
+            case '+':
+                switch (str.charAt(0)) {
+                    case 'A':
+                        System.out.println("4.3");
+                        System.exit(0);
+                    case 'B':
+                        System.out.println("3.3");
+                        System.exit(0);
+                    case 'C':
+                        System.out.println("2.3");
+                        System.exit(0);
+                    case 'D':
+                        System.out.println("1.3");
+                        System.exit(0);
+                }
+
+            case '0':
+                switch (str.charAt(0)) {
+                    case 'A':
+                        System.out.println("4.0");
+                        System.exit(0);
+                    case 'B':
+                        System.out.println("3.0");
+                        System.exit(0);
+                    case 'C':
+                        System.out.println("2.0");
+                        System.exit(0);
+                    case 'D':
+                        System.out.println("1.0");
+                        System.exit(0);
+                }
+
+            case '-':
+                switch (str.charAt(0)) {
+                    case 'A':
+                        System.out.println("3.7");
+                        System.exit(0);
+                    case 'B':
+                        System.out.println("2.7");
+                        System.exit(0);
+                    case 'C':
+                        System.out.println("1.7");
+                        System.exit(0);
+                    case 'D':
+                        System.out.println("0.7");
+                        System.exit(0);
+                }
+            default:
+                System.out.println("0.0");
+                System.exit(0);
+        }
+
+
+    }
+}
