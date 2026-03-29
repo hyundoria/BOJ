@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+		
+		
+int C = sc.nextInt();
+			
+			for (int i = 0; i < C; i++) {
+				int n = sc.nextInt();
+				
+				float sum = 0;
+				float count = 0;
+				
+				int arr[] = new int[n];
+				
+				for (int r = 0; r < arr.length; r++) {										
+					arr[r] = sc.nextInt();									
+				}
+				
+				for (int q=0; q < arr.length; q++) {
+					sum += arr[q];				
+				}
+				
+				sum = sum / n;
+				
+				for (int p = 0; p < arr.length; p++) {
+					if (arr[p] > sum) {
+						count += 1;
+					}
+				}	
+				
+				count = (count / n) * 100;
+		
+				System.out.printf("%.3f%%\n" ,count);
+			}
+			
+			
+		}
+	}
+}
