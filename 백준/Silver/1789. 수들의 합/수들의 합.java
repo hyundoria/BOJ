@@ -1,0 +1,24 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        long n = sc.nextLong();
+
+        long cnt = 0;
+        long sum = 0;
+
+        while (sum <= n) {
+            sum += cnt++;
+        }
+
+        System.out.println(cnt-2);
+
+    }
+}
+
+
+
