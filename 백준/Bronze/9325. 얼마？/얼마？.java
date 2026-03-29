@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+					
+			int n = sc.nextInt();
+			
+	
+			
+			for (int i = 0; i < n; i++) {
+				int sum = sc.nextInt();		//자동차 가격
+				int b = sc.nextInt();		//서로 다른 옵션의 개수					
+				for (int j=0; j < b; j++) {
+					int c = sc.nextInt();
+					int d = sc.nextInt();
+					sum += c*d;
+				}				
+				System.out.println(sum);
+			}
+							
+			
+		
+		
+		}		
+	}
+}
+
