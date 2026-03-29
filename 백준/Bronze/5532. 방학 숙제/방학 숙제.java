@@ -1,0 +1,62 @@
+import java.util.Scanner;
+	
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			int l = sc.nextInt();
+			int b = sc.nextInt();
+			int a = sc.nextInt();
+			int c = sc.nextInt();
+			int d = sc.nextInt();
+			
+			int count1 = 0;
+			
+			while (true) {
+								
+				if (b >= c) {
+					b -= c;
+					count1++;
+				}
+				else if (0 < b && b < c) {
+					count1++;
+					break;
+				}
+				else if (b == 0) {
+					break;
+				}
+			}
+			
+			int count2 = 0;
+			
+			while (true) {
+				
+				if (a >= d) {
+					a -= d;
+					count2++;
+				}
+				else if (a > 0 && a < d) {
+					count2++;
+					break;
+				}
+				 else if (a == 0) {
+						break;
+					}
+			}
+
+			
+			if (count1 > count2) {
+			
+				System.out.println(l-count1);
+			}
+			else {
+				System.out.println(l-count2);
+			}
+			
+			
+			
+			
+			
+			}
+		}
+	}
