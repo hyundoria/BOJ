@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			int n = sc.nextInt();
+			
+			for(int i=0; i<n; i++) {
+				int sum = 0;
+				int k = 0;
+				String str = sc.next();				
+				if(str.charAt(0) == 79) {
+					sum += 1;						
+				}
+				for(int j=1; j<str.length(); j++) {				
+					char c = str.charAt(j);										
+					if(c == 79) {
+						sum += 1;
+						if(str.charAt(j) == 79 && str.charAt(j-1) == 79) {
+							k += 1;
+							sum += k;
+						}
+					}							
+					else if(c == 88) {
+						k = 0;
+					}				
+				}
+				System.out.println(sum);		
+			}
+			
+				
+			
+			
+			}
+		}
+	}
