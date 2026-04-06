@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Main {	 
+	public static void main(String[] args)  {
+		try (Scanner sc = new Scanner(System.in)) {
+			
+			
+		
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			
+			int sum = 0;
+			
+			if (a == 1 || a == 3 || a == 5 || a ==7 || a ==8|| a ==10|| a ==12) {
+				sum -= 31-b;														
+			}
+			
+			else if (a==2) {
+				sum -= 28-b;				
+			}
+			
+			else if (a == 4 || a == 6 || a == 9 || a == 11 ) {
+				sum -= 30-b;					
+			}
+			
+			while (a > 0) {
+				if (a == 1 || a == 3 || a == 5 || a ==7 || a ==8|| a ==10|| a ==12) {
+						sum += 31;
+						a--;														
+				}
+				else if (a==2) {
+					sum += 28;
+					a--;				
+				}
+				else if (a == 4 || a == 6 || a == 9 || a == 11 ) {
+					sum += 30;					
+					a--;					
+				}
+			}
+			
+			sum %= 7;
+			
+			if (sum == 0) {
+				System.out.println("SUN");
+			}
+			if (sum == 1) {
+				System.out.println("MON");
+			}
+			if (sum == 2) {
+				System.out.println("TUE");
+			}
+			if (sum == 3) {
+				System.out.println("WED");
+			}
+			if (sum == 4) {
+				System.out.println("THU");
+			}
+			if (sum == 5) {
+				System.out.println("FRI");
+			}	
+			if (sum == 6) {
+				System.out.println("SAT");
+			}
+
+				
+	
+			
+		
+		
+			}
+		}
+	}
+
